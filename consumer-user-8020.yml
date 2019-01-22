@@ -15,4 +15,11 @@ eureka:
     
 feign:
   hystrix:
-    enabled: true                 #启动熔断器机制 !!!!!!!!!!!!!   
+    enabled: true                 #启动熔断器机制 !!!!!!!!!!!!!  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000  #设定熔断器超时时间 
